@@ -1,0 +1,60 @@
+# General OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/**
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.swo
+*.egg-info/**
+*.eggs/**
+.Python
+.env
+.venv/**
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+poetry.lock
+
+# Virtual environments
+env/**
+venv/**
+.idea/
+.vscode/
+.mypy_cache/**
+.pytest_cache/**
+.coverage
+.tox/**
+.nox/**
+htmlcov/**
+*.cover
+*.coverage
+nosetests.xml
+coverage.xml
+pytestdebug.log
+
+# Backend (Django/Flask specific)
+*.sqlite3
+instance/**
+config.json
+*.log
+*.pem
+
+# Frontend (Node.js, Angular, React, Vue)
+node_modules/**
+npm-debug.log
+yarn-error.log
+package-lock.json
+dist/**
+build/**
+*.map
+.cache/**
+
+# Unit tests
+tests/__pycache__/**
+tests/*.pyc
+junitxml/**
+coverage/**
