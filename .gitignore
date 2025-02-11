@@ -23,7 +23,6 @@ poetry.lock
 env/**
 venv/**
 .idea/
-.vscode/
 .mypy_cache/**
 .pytest_cache/**
 .coverage

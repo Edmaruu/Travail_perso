@@ -1,33 +1,32 @@
 import os
-import random
 import sys
+import pytest
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from scripts.fizz_kata import fizzbuzz
 
 
+
 def test_3x():
-    random_number = random.randint(1, 100)
-    while random_number % 5 == 0:
-        random_number = random.randint(1, 100)
-    assert fizzbuzz(3 * random_number) == "Fizz"
+    number = 3 *7 
+    result = fizzbuzz(number)
+    assert result == "Fizz"
 
 
 def test_5x():
-    random_number = random.randint(1, 100)
-    while random_number % 3 == 0:
-        random_number = random.randint(1, 100)
-    assert fizzbuzz(5 * random_number) == "Buzz"
+    assert fizzbuzz(5 * 7) == "Buzz"
 
 
 def test_5x3():
-    random_number = random.randint(1, 100)
-    assert fizzbuzz(3 * 5 * random_number) == "FizzBuzz"
+    assert fizzbuzz(3 * 5 * 7) == "FizzBuzz"
 
 
-def test_any():
-    random_number = random.randint(1, 100)
-    while random_number % 3 == 0 or random_number % 5 == 0:
-        random_number = random.randint(1, 100)
-    assert fizzbuzz(random_number) == str(random_number)
+def test_should_return_number_as_string():
+    assert fizzbuzz(7) == str(7)
+
+
+#Ce test ne devrait pas être créé si tu as utilisé le typage statique
+def test_should_raise_ValueError():
+    with pytest.raises(ValueError):
+        fizzbuzz("m")
